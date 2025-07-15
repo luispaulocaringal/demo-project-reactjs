@@ -40,7 +40,7 @@ function Login () {
             <div className="col-md-12">
               <div className="form-group">
                 <label>Username</label>
-                <input className="form-control" type="text" ref={userRef} value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <input className="form-control" type="text" ref={userRef} value={username} onChange={(e) => setUsername(e.target.value)} required/>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ function Login () {
             <div className="col-md-12">
               <div className="form-group">
                 <label>Password</label>
-                <input className="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <input className="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ function Login () {
             <div className="col-md-12">
               <div className="form-group">
                 <label>Company Code</label>
-                <input className="form-control" type="text" value={company} onChange={(e) => setCompany(e.target.value)}/>
+                <input className="form-control" type="text" value={company} onChange={(e) => setCompany(e.target.value)} required/>
               </div>
             </div>
           </div>

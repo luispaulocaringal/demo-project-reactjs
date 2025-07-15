@@ -11,6 +11,8 @@ body {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+
+  background-color: #E7F0DC;
 }
 
 label {
