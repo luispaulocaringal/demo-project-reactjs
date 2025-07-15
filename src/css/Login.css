@@ -1,0 +1,15 @@
+.card {
+  width: 30%;
+  min-width: 500px;
+  background-color: #E7F0DC;
+  border: none;
+}
+
+.forgot-password {
+  font-size: 10pt;
+}
+
+.login-message {
+  font-size: 10pt;
+  font-weight: 500;
+}
