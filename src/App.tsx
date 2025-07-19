@@ -7,8 +7,8 @@ import Footer from './components/Footer/Footer'
 function App() {
   return (
     <>
-      <Auth />
-      {/* <Home/> */}
+      {/* <Auth /> */}
+      <Home/>
       <Footer />
     </>
   )
