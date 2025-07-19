@@ -12,7 +12,15 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 
-  background-color: #E7F0DC;
+  background: #E7F0DC;
+  background: -webkit-linear-gradient(90deg,rgba(231, 240, 220, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  background: -moz-linear-gradient(90deg,rgba(231, 240, 220, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  background: linear-gradient(90deg,rgba(231, 240, 220, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr="#E7F0DC",
+    endColorstr="#EDDD53",
+    GradientType=1
+);
 }
 
 label {

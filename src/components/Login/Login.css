@@ -1,8 +1,8 @@
 .card {
   width: 30%;
   min-width: 500px;
-  background-color: #E7F0DC;
   border: none;
+  background-color: #f8f9fa;
 }
 
 .forgot-password {

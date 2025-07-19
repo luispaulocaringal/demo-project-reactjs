@@ -1,5 +1,5 @@
-import Login from '../components/Login'
-import '../css/Auth.css'
+import Login from '../../components/Login/Login'
+import './Auth.css'
 
 function Auth () {
   return (

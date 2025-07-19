@@ -1,5 +1,5 @@
-import PoweredBy from '../assets/powered_by.png'
-import '../css/Footer.css'
+import PoweredBy from '../../assets/powered_by.png'
+import './Footer.css'
 
 function Footer () {
   return (
