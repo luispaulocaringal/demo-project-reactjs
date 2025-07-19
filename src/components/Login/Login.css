@@ -1,15 +1,45 @@
-.card {
-  width: 30%;
-  min-width: 500px;
-  border: none;
-  background-color: #f8f9fa;
+@media only screen and (min-width: 600px) {
+  .card {
+    width:90% !important;
+    height: auto !important;
+    border: none;
+    background-color: #f8f9fa;
+  }
 }
 
-.forgot-password {
-  font-size: 10pt;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {  
+  .card {
+    width:70% !important;
+    height: auto !important;
+    border: none;
+    background-color: #f8f9fa;
+  }
 }
 
-.login-message {
-  font-size: 10pt;
-  font-weight: 500;
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card {
+    width:50% !important;
+    height: auto !important;
+    border: none;
+    background-color: #f8f9fa;
+  }}
+
+@media only screen and (min-width: 1200px) {
+  .card {
+    width:30% !important;
+    height: auto !important;
+    border: none;
+    background-color: #f8f9fa;
+  }
+  
+  .forgot-password {
+    font-size: 10pt;
+  }
+  
+  .login-message {
+    font-size: 10pt;
+    font-weight: 500;
+  }
 }

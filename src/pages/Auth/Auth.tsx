@@ -1,11 +1,16 @@
 import Login from '../../components/Login/Login'
+import Title from "../../components/Title/Title";
+
 import './Auth.css'
 
 function Auth () {
   return (
-    <div className="auth d-flex align-items-center justify-content-center">
-      <Login/>
-    </div>
+    <>
+      <Title title="Login"/>
+      <div className="auth d-flex justify-content-center">
+        <Login/>
+      </div>
+    </>
   )
 }
 

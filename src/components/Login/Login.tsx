@@ -63,7 +63,7 @@ function Login () {
   }, [credentials.username, credentials.password]);
 
   return (
-    <div className="card shadow">
+    <div className="card shadow mx-auto my-auto">
       <div className="card-body">
         <form onSubmit={(e) => handleSubmit(e)}>
           <div className="row mb-2">
