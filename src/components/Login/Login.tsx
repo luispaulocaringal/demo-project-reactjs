@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { FadeInUp } from '../Animation/Animation';
 
@@ -6,6 +7,8 @@ import './Login.css';
 
 function Login () {
   const userRef:any = useRef('');
+
+  let navigate = useNavigate();
 
   // State of credential fields
   const [credentials, setCredentials] = useState({
@@ -37,6 +40,7 @@ function Login () {
       success: 1,
       message: "Login success."
     });
+    navigate("/");
     return;
     // -------------------------------- TEST --------------------------------
   }
