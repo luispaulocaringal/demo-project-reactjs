@@ -1,8 +1,10 @@
+import { SlideOutDown } from '../Animations/Animations';
+
 import './Navbar.css'
 
 function Navbar () {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary shadow fixed-top">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary shadow">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">Navbar</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,23 +16,24 @@ function Navbar () {
               <a className="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Disabled</a>
+              <a className="nav-link" href="#">My Patients</a>
             </li>
           </ul>
           <ul className="navbar-nav">
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Hello, Louie
               </a>
-              <ul className="dropdown-menu">
+              <SlideOutDown 
+                className="dropdown-menu"
+                duration="0.2s"
+                component="ul"
+              >
                 <li><a className="dropdown-item" href="#">Profile</a></li>
                 <li><a className="dropdown-item" href="#">Settings</a></li>
                 <li><hr className="dropdown-divider"/></li>
                 <li><a className="dropdown-item" href="#">Logout</a></li>
-              </ul>
+              </SlideOutDown>
             </li>
           </ul>
         </div>

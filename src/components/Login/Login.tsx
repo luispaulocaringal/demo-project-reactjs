@@ -1,6 +1,8 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react';
 
-import './Login.css'
+import { FadeInUp } from '../Animations/Animations';
+
+import './Login.css';
 
 function Login () {
   const userRef:any = useRef('');
@@ -63,7 +65,11 @@ function Login () {
   }, [credentials.username, credentials.password]);
 
   return (
-    <div className="card shadow mx-auto my-auto">
+    <FadeInUp 
+      className="card shadow mx-auto my-auto"
+      duration="1s"
+      component="div"
+    >
       <div className="card-body">
         <form onSubmit={(e) => handleSubmit(e)}>
           <div className="row mb-2">
@@ -110,7 +116,7 @@ function Login () {
           </div>
         </form>
       </div>
-    </div>
+    </FadeInUp>
   )
 }
 
