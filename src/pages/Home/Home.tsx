@@ -1,6 +1,6 @@
 import Navbar from '../../components/Navbar/Navbar'
 import Title from "../../components/Title/Title";
-import { HelixIcon } from '../../components/Animations/LoadingIcons/LoadingIcons';
+import { HelixIcon } from '../../components/Animation/LoadingIcons/LoadingIcons';
 
 import './Home.css';
 

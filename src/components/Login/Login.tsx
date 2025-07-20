@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-import { FadeInUp } from '../Animations/Animations';
+import { FadeInUp } from '../Animation/Animation';
 
 import './Login.css';
 
