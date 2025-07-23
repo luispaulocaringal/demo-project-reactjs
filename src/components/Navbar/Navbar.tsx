@@ -17,22 +17,22 @@ function Navbar () {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink to="/" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"} end>Home</NavLink>
+              <NavLink to="/" className={({ isActive }) => (isActive && "active") + " nav-link"} end>Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"}>Contact</NavLink>
+              <NavLink to="/contact" className={({ isActive }) => (isActive && "active") + " nav-link"}>Contact</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/marketing" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"}>Marketing</NavLink>
+              <NavLink to="/marketing" className={({ isActive }) => (isActive && "active") + " nav-link"}>Marketing</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/finance" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"}>Finance</NavLink>
+              <NavLink to="/finance" className={({ isActive }) => (isActive && "active") + " nav-link"}>Finance</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/insight" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"}>Insight</NavLink>
+              <NavLink to="/insight" className={({ isActive }) => (isActive && "active") + " nav-link"}>Insight</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/content" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"}>Content</NavLink>
+              <NavLink to="/content" className={({ isActive }) => (isActive && "active") + " nav-link"}>Content</NavLink>
             </li>
           </ul>
           <ul className="navbar-nav">
