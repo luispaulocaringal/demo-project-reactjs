@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import { SlideOutDown } from '../Animation/Animation';
 
@@ -10,13 +10,6 @@ import brobyteLogo from '../../assets/brobyte_logo.png';
 function Navbar () {
   const [activeTab, setActiveTab] = useState("");
 
-  let navigate = useNavigate();
-
-  function handleNavigate(to:string) {
-    setActiveTab(to);
-    navigate("/" + to);
-  }
-
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary shadow">
       <div className="container-fluid">
@@ -26,23 +19,23 @@ function Navbar () {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills me-auto mb-2 mb-lg-0">
-            <li className="nav-item active" onClick={() => handleNavigate("")}>
-              <a className={"nav-link " + (activeTab === "" && "active")} aria-current="page" href="#">Home</a>
+            <li className="nav-item">
+              <NavLink to="/" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"} end>Home</NavLink>
             </li>
-            <li className="nav-item" onClick={() => handleNavigate("contact")}>
-              <a className={"nav-link " + (activeTab === "contact" && "active")} href="#">Contact</a>
+            <li className="nav-item">
+              <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"}>Contact</NavLink>
             </li>
-            <li className="nav-item" onClick={() => handleNavigate("marketing")}>
-              <a className={"nav-link " + (activeTab === "marketing" && "active")} href="#">Marketing</a>
+            <li className="nav-item">
+              <NavLink to="/marketing" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"}>Marketing</NavLink>
             </li>
-            <li className="nav-item" onClick={() => handleNavigate("finance")}>
-              <a className={"nav-link " + (activeTab === "finance" && "active")} href="#">Finance</a>
+            <li className="nav-item">
+              <NavLink to="/finance" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"}>Finance</NavLink>
             </li>
-            <li className="nav-item" onClick={() => handleNavigate("insight")}>
-              <a className={"nav-link " + (activeTab === "insight" && "active")} href="#">Insight</a>
+            <li className="nav-item">
+              <NavLink to="/insight" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"}>Insight</NavLink>
             </li>
-            <li className="nav-item" onClick={() => handleNavigate("content")}>
-              <a className={"nav-link " + (activeTab === "content" && "active")} href="#">Content</a>
+            <li className="nav-item">
+              <NavLink to="/content" className={({ isActive }) => (isActive ? "active" : undefined) + " nav-link"}>Content</NavLink>
             </li>
           </ul>
           <ul className="navbar-nav">
@@ -55,10 +48,10 @@ function Navbar () {
                 duration="0.2s"
                 component="ul"
               >
-                <li onClick={() => handleNavigate("profile")}><a className="dropdown-item" href="#">Profile</a></li>
-                <li onClick={() => handleNavigate("setting")}><a className="dropdown-item" href="#">Settings</a></li>
+                <li><Link to="/profile" className="dropdown-item">Profile</Link></li>
+                <li><Link to="/setting" className="dropdown-item">Settings</Link></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li onClick={() => handleNavigate("login")}><a className="dropdown-item" href="#">Logout</a></li>
+                <li><Link to="/login" className="dropdown-item">Logout</Link></li>
               </SlideOutDown>
             </li>
           </ul>
