@@ -8,7 +8,7 @@ import brobyteLogo from '../../assets/brobyte_logo.png';
 
 function Navbar () {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary shadow">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary shadow mb-2">
       <div className="container-fluid">
         <a className="navbar-brand" href="#"><img className="logo" src={brobyteLogo} alt="BroByte"/></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

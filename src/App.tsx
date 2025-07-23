@@ -5,7 +5,6 @@ import './App.css'
 import RootLayout from './pages/RootLayout/RootLayout';
 import Auth from './pages/Auth/Auth'
 import Home from './pages/Home/Home'
-import Footer from './components/Footer/Footer'
 import Contact from './pages/Contact/Contact';
 import Finance from './pages/Finance/Finance';
 import Marketing from './pages/Marketing/Marketing';
@@ -38,7 +37,6 @@ function App() {
   return (
     <>
       <RouterProvider router={router}/>
-      <Footer />
     </>
   )
 }

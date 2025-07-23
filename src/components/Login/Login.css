@@ -1,5 +1,5 @@
 @media only screen and (min-width: 600px) {
-  .card {
+  .login-card {
     width:90% !important;
     height: auto !important;
     border: none;
@@ -9,7 +9,7 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {  
-  .card {
+  .login-card {
     width:70% !important;
     height: auto !important;
     border: none;
@@ -19,7 +19,7 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .card {
+  .login-card {
     width:50% !important;
     height: auto !important;
     border: none;
@@ -27,7 +27,7 @@
   }}
 
 @media only screen and (min-width: 1200px) {
-  .card {
+  .login-card {
     width:30% !important;
     height: auto !important;
     border: none;

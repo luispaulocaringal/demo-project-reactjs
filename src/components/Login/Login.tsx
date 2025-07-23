@@ -70,7 +70,7 @@ function Login () {
 
   return (
     <FadeInUp 
-      className="card shadow mx-auto my-auto"
+      className="card shadow mx-auto my-auto login-card"
       duration="1s"
       component="div"
     >

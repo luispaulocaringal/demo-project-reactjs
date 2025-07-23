@@ -3,8 +3,10 @@ import './Footer.css'
 
 function Footer () {
   return (
-    <div className="fixed-bottom p-4">
-      <img src={PoweredBy}/>
+    <div className="row">
+      <div className="col-md-12">
+        <img src={PoweredBy} className="mb-4"/>
+      </div>
     </div>
   )
 }
