@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 import { SlideOutDown } from '../Animation/Animation';
@@ -8,8 +7,6 @@ import './Navbar.css';
 import brobyteLogo from '../../assets/brobyte_logo.png';
 
 function Navbar () {
-  const [activeTab, setActiveTab] = useState("");
-
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary shadow">
       <div className="container-fluid">
