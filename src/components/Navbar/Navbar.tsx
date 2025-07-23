@@ -8,7 +8,7 @@ import './Navbar.css';
 import brobyteLogo from '../../assets/brobyte_logo.png';
 
 function Navbar () {
-  const [activeTab, setActiveTab] = useState("home");
+  const [activeTab, setActiveTab] = useState("");
 
   let navigate = useNavigate();
 
@@ -25,8 +25,8 @@ function Navbar () {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item" onClick={() => handleNavigate("")}>
+          <ul className="nav nav-pills me-auto mb-2 mb-lg-0">
+            <li className="nav-item active" onClick={() => handleNavigate("")}>
               <a className={"nav-link " + (activeTab === "" && "active")} aria-current="page" href="#">Home</a>
             </li>
             <li className="nav-item" onClick={() => handleNavigate("contact")}>

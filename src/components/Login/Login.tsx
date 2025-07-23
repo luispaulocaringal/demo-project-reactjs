@@ -79,7 +79,7 @@ function Login () {
           <div className="row mb-2">
             <div className="col-md-12">
               <div className="form-group">
-                <label>Username</label>
+                <label className="input-label">Username</label>
                 <input className="form-control" type="text" ref={userRef} value={credentials.username} onChange={(e) => handleChange(e, "username")} required/>
               </div>
             </div>
@@ -87,7 +87,7 @@ function Login () {
           <div className="row mb-4">
             <div className="col-md-12">
               <div className="form-group">
-                <label>Password</label>
+                <label className="input-label">Password</label>
                 <input className="form-control" type="password" value={credentials.password} onChange={(e) => handleChange(e, "password")} required/>
               </div>
             </div>
@@ -96,7 +96,7 @@ function Login () {
           <div className="row mb-4">
             <div className="col-md-12">
               <div className="form-group">
-                <label>Company Code</label>
+                <label className="input-label">Company Code</label>
                 <input className="form-control" type="text" value={credentials.company} onChange={(e) => handleChange(e, "company")} required/>
               </div>
             </div>
