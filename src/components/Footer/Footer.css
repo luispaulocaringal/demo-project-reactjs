@@ -1,4 +1,4 @@
-img {
-  width:125px;
+.footer-img {
+  width:125px !important;
   float: right;
 }

@@ -10,7 +10,7 @@ function DashboardModule({ data, className, component = "none" } : { data:any, c
           {data}
         </div>
         <div className="card-body">
-          {component}
+          {component === "none" ? <HelixIcon isLoading={true} /> : component}
         </div>
       </div>
     </div>

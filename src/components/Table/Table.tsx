@@ -5,13 +5,15 @@ import 'datatables.net-responsive-bs5';
 
 DataTable.use(DT);
 
-function Table({ data }: { data:any }) {
+function Table({ data, header }: { data:any, header:any }) {
 return (
-  <DataTable data={ data } className="table table-striped shadow">
+  <DataTable 
+    data={ data } 
+    className="table table-striped shadow"
+    >
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Position</th>
+        { header }
       </tr>
     </thead>
   </DataTable>

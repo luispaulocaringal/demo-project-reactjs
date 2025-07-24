@@ -5,7 +5,7 @@ function Footer () {
   return (
     <div className="row">
       <div className="col-md-12">
-        <img src={PoweredBy} className="mb-4"/>
+        <img src={PoweredBy} title="BroByte" alt="BroByte" className="mb-4 footer-img"/>
       </div>
     </div>
   )
