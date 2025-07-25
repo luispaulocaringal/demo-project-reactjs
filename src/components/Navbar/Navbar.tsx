@@ -5,8 +5,11 @@ import { SlideOutDown } from '../Animation/Animation';
 import './Navbar.css';
 
 import brobyteLogo from '../../assets/brobyte_logo.png';
+import notification from '../../assets/notification.svg';
+import notificationAlert from '../../assets/notification-alert.svg';
 
 function Navbar () {
+  const newNotifications = true;
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary shadow mb-2">
       <div className="container-fluid">
@@ -36,6 +39,9 @@ function Navbar () {
             </li>
           </ul>
           <ul className="navbar-nav">
+            <li className="nav-item my-auto">
+              <img role="button" src={newNotifications ? notificationAlert: notification} height={20} />
+            </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Hello, Louie

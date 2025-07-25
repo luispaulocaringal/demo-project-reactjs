@@ -6,6 +6,8 @@ import Calendar from '../../components/Calendar/Calendar';
 
 import { getRequest } from '../../utils/api';
 
+import dashboard from '../../assets/dashboard.svg';
+
 import './Home.css';
 
 const weatherUrl:string = `${import.meta.env.VITE_WEATHER_API_URL}?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=Manila`;
@@ -45,12 +47,12 @@ function Home () {
 
   let misc = <>
     <img src={weatherData.icon} alt="Weather Icon" className="my-auto" height={30}/>
-    <p className="ps-1 my-auto">{weatherData.text}</p>
+    <p className="ps-1 my-auto text-capitalize">{weatherData.text}</p>
   </>
 
   return (
     <>
-      <PageHeader title="My Dashboard" misc={misc}/>
+      <PageHeader title="My Dashboard" icon={dashboard} misc={misc}/>
       <div className="row">
         { modules.map(({ module, className, component }, key) => <DashboardModule data={module} key={key} className={className} component={component}/>) }
       </div>

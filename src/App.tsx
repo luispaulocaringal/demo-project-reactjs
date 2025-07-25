@@ -3,9 +3,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css'
 
 import RootLayout from './pages/RootLayout/RootLayout';
+import ContactRoot from './pages/Contacts/ContactRoot';
 import Auth from './pages/Auth/Auth'
 import Home from './pages/Home/Home'
-import Contact from './pages/Contact/Contact';
+import Contacts from './pages/Contacts/Contacts';
+import ContactDetails from './pages/Contacts/ContactDetails';
 import Finance from './pages/Finance/Finance';
 import Marketing from './pages/Marketing/Marketing';
 import Insight from './pages/Insight/Insight';
@@ -20,14 +22,17 @@ const router = createBrowserRouter([
     element: <RootLayout/>,
     errorElement: <Error/>,
     children: [
-      { path: '/', element: <Home/> },
-      { path: '/contact', element: <Contact/> },
-      { path: '/finance', element: <Finance/> },
-      { path: '/marketing', element: <Marketing/> },
-      { path: '/insight', element: <Insight/> },
-      { path: '/content', element: <Content/> },
-      { path: '/profile', element: <Profile/> },
-      { path: '/setting', element: <Setting/> }
+      { index: true, element: <Home/> },
+      { path: 'contact', element: <ContactRoot/>, children: [
+        { index: true, element: <Contacts/> },
+        { path: ':contactId', element: <ContactDetails/> }
+      ] },
+      { path: 'finance', element: <Finance/> },
+      { path: 'marketing', element: <Marketing/> },
+      { path: 'insight', element: <Insight/> },
+      { path: 'content', element: <Content/> },
+      { path: 'profile', element: <Profile/> },
+      { path: 'setting', element: <Setting/> }
     ]
   },
   { path: '/login', element: <Auth/> }

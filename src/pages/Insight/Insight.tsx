@@ -1,7 +1,11 @@
+import PageHeader from "../../components/PageHeader/PageHeader";
+
+import insight from "../../assets/insight.svg";
+
 function Insight() {
   return(
     <>
-      <h1>My Insights</h1>
+      <PageHeader title="My Insights" icon={insight}/>
     </>
   )
 }

@@ -1,7 +1,11 @@
+import PageHeader from "../../components/PageHeader/PageHeader";
+
+import content from "../../assets/content.svg";
+
 function Content() {
   return(
     <>
-      <h1>My Contents</h1>
+      <PageHeader title="My Contents" icon={content}/>
     </>
   )
 }

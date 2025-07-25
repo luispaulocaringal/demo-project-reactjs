@@ -1,7 +1,11 @@
+import PageHeader from "../../components/PageHeader/PageHeader";
+
+import finance from "../../assets/finance.svg";
+
 function Finance() {
   return(
     <>
-      <h1>My Finances</h1>
+      <PageHeader title="My Finance" icon={finance}/>
     </>
   )
 }

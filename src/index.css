@@ -25,14 +25,10 @@ body {
   -webkit-font-smoothing: antialiased;
 
   background: #E7F0DC;
-  background: -webkit-linear-gradient(90deg,rgba(231, 240, 220, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-  background: -moz-linear-gradient(90deg,rgba(231, 240, 220, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-  background: linear-gradient(90deg,rgba(231, 240, 220, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(
-    startColorstr="#E7F0DC",
-    endColorstr="#EDDD53",
-    GradientType=1
-  );
+  background: -webkit-linear-gradient(180deg, rgba(231, 240, 220, 1) 0%, rgba(210, 228, 187, 1) 50%, rgba(168, 195, 134, 1) 100%);
+  background: -moz-linear-gradient(180deg, rgba(231, 240, 220, 1) 0%, rgba(210, 228, 187, 1) 50%, rgba(168, 195, 134, 1) 100%);
+  background: linear-gradient(180deg, rgba(231, 240, 220, 1) 0%, rgba(210, 228, 187, 1) 50%, rgba(168, 195, 134, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#E7F0DC", endColorstr="#A8C386", GradientType=0);
 }
 
 .input-label {
@@ -40,10 +36,13 @@ body {
   text-transform: capitalize;
 }
 
-.btn-primary {
-  font-size: 11pt;
+.btn {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.btn-primary {
+  font-size: 11pt;
   background-color: #597445 !important;
   border: none;
   transition-duration: 1s !important;

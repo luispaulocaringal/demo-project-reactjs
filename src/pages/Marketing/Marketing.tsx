@@ -1,7 +1,11 @@
+import PageHeader from "../../components/PageHeader/PageHeader";
+
+import maketing from "../../assets/marketing.svg";
+
 function Marketing() {
   return(
     <>
-      <h1>My Marketing</h1>
+      <PageHeader title="My Marketing" icon={maketing}/>
     </>
   )
 }

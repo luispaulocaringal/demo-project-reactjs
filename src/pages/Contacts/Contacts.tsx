@@ -1,10 +1,12 @@
 import Table from "../../components/Table/Table";
 import PageHeader from "../../components/PageHeader/PageHeader";
 
-function Contact() {
+import contact from '../../assets/contact.svg';
+
+function Contacts() {
   const data = [
-    [ 'Tiger Nixon', 'System Architect' ],
-    [ 'Garrett Winters', 'Accountant' ],
+    [ 1, 'Tiger Nixon', 'System Architect' ],
+    [ 2, 'Garrett Winters', 'Accountant' ],
   ]
 
   let buttons = <>
@@ -13,11 +15,12 @@ function Contact() {
 
   return(
     <>
-      <PageHeader title="My Contacts" buttons={buttons}/>
+      <PageHeader title="My Contacts" icon={contact} buttons={buttons}/>
       <div className="row mb-2">
         <div className="col-md-12">
           <Table data={ data } header={
             <>
+              <th>ID</th>
               <th>Name</th>
               <th>Position</th>
             </>
@@ -28,4 +31,4 @@ function Contact() {
   )
 }
 
-export default Contact;
+export default Contacts;
