@@ -12,7 +12,7 @@ function Calendar() {
 
   return (
     <>
-     <ReactCalendar className="w-100 h-100 calendar rounded" value={date} onChange={setDate} />
+     <ReactCalendar className="w-100 h-100 calendar rounded border-0 shadow" value={date} onChange={setDate} />
     </>
   )
 }

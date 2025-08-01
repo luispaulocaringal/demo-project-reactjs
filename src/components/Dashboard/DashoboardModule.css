@@ -1,7 +1,11 @@
 .dashboard-card {
-    font-size: 10pt;
-    font-weight: 500;
-    height: 45vh;
-    background-color: #f8f9fa;
-    border: none;
+  font-size: 10pt;
+  font-weight: 500;
+  height: 400px;
+  background-color: #f8f9fa;
+  border: none;
+}
+
+.card-body {
+  overflow-y: auto !important;
 }

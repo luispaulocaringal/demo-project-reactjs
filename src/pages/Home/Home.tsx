@@ -54,7 +54,7 @@ function Home () {
     <>
       <PageHeader title="My Dashboard" icon={dashboard} misc={misc}/>
       <div className="row">
-        { modules.map(({ module, className, component }, key) => <DashboardModule data={module} key={key} className={className} component={component}/>) }
+        { modules.map(({ module, className, component }, key) => <DashboardModule title={module} key={key} className={className} component={component}/>) }
       </div>
     </>
   )

@@ -2,12 +2,12 @@ import { HelixIcon } from '../../components/Animation/LoadingIcons/LoadingIcons'
 
 import "./DashoboardModule.css";
 
-function DashboardModule({ data, className, component = "none" } : { data:any, className:any, component:any }) {
+function DashboardModule({ title, className, component = "none" } : { title:any, className:any, component:any }) {
   return (
     <div className={className}>
       <div className="card w-100 dashboard-card mb-4 shadow">
         <div className="card-header">
-          {data}
+          {title}
         </div>
         <div className="card-body">
           {component === "none" ? <HelixIcon isLoading={true} /> : component}

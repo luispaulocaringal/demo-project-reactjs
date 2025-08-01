@@ -4,9 +4,9 @@ import './App.css'
 
 import RootLayout from './pages/RootLayout/RootLayout';
 import ContactRoot from './pages/Contacts/ContactRoot';
-import Auth from './pages/Auth/Auth'
+import Auth, { action as loginAction } from './pages/Auth/Auth'
 import Home from './pages/Home/Home'
-import Contacts from './pages/Contacts/Contacts';
+import Contacts, { loader as contactsLoader } from './pages/Contacts/Contacts';
 import ContactDetails from './pages/Contacts/ContactDetails';
 import Finance from './pages/Finance/Finance';
 import Marketing from './pages/Marketing/Marketing';
@@ -23,8 +23,15 @@ const router = createBrowserRouter([
     errorElement: <Error/>,
     children: [
       { index: true, element: <Home/> },
-      { path: 'contact', element: <ContactRoot/>, children: [
-        { index: true, element: <Contacts/> },
+      { 
+        path: 'contact', 
+        element: <ContactRoot/>, 
+        children: [
+        { 
+          index: true, 
+          element: <Contacts/>,
+          loader: contactsLoader, 
+        },
         { path: ':contactId', element: <ContactDetails/> }
       ] },
       { path: 'finance', element: <Finance/> },
@@ -35,7 +42,11 @@ const router = createBrowserRouter([
       { path: 'setting', element: <Setting/> }
     ]
   },
-  { path: '/login', element: <Auth/> }
+  { 
+    path: '/login', 
+    element: <Auth/>, 
+    action: loginAction 
+  },
 ])
 
 function App() {

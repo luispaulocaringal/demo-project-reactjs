@@ -1,14 +1,13 @@
+import { useLoaderData } from "react-router-dom";
+
 import Table from "../../components/Table/Table";
 import PageHeader from "../../components/PageHeader/PageHeader";
 
 import contact from '../../assets/contact.svg';
 
 function Contacts() {
-  const data = [
-    [ 1, 'Tiger Nixon', 'System Architect' ],
-    [ 2, 'Garrett Winters', 'Accountant' ],
-  ]
-
+  const { data } = useLoaderData();
+  
   let buttons = <>
     <button className="btn btn-primary btn-sm">Add Contact</button>
   </>
@@ -29,6 +28,17 @@ function Contacts() {
       </div>
     </>
   )
+}
+
+export function loader() {
+  // Here you would typically fetch the contacts from your backend
+  // For now, we will just return a dummy response
+  const data = [
+    [ 1, 'Tiger Nixon', 'System Architect' ],
+    [ 2, 'Garrett Winters', 'Accountant' ],
+  ]
+
+  return { data };
 }
 
 export default Contacts;
