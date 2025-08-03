@@ -33,7 +33,7 @@ function Contacts() {
 export function loader() {
   // Here you would typically fetch the contacts from your backend
   // For now, we will just return a dummy response
-  const data = [
+  const data:any = [
     [ 1, 'Tiger Nixon', 'System Architect' ],
     [ 2, 'Garrett Winters', 'Accountant' ],
   ]

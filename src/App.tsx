@@ -4,7 +4,7 @@ import './App.css'
 
 import RootLayout from './pages/RootLayout/RootLayout';
 import ContactRoot from './pages/Contacts/ContactRoot';
-import Auth, { action as loginAction } from './pages/Auth/Auth'
+import AuthRoot, { action as loginAction } from './pages/Auth/AuthRoot'
 import Home from './pages/Home/Home'
 import Contacts, { loader as contactsLoader } from './pages/Contacts/Contacts';
 import ContactDetails from './pages/Contacts/ContactDetails';
@@ -15,6 +15,7 @@ import Content from './pages/Content/Content';
 import Profile from './pages/Profile/Profile';
 import Setting from './pages/Setting/Setting';
 import Error from './pages/Error/Error';
+import Login from './components/Login/Login';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,10 @@ const router = createBrowserRouter([
     element: <RootLayout/>,
     errorElement: <Error/>,
     children: [
-      { index: true, element: <Home/> },
+      { 
+        index: true, 
+        element: <Home/> 
+      },
       { 
         path: 'contact', 
         element: <ContactRoot/>, 
@@ -32,7 +36,10 @@ const router = createBrowserRouter([
           element: <Contacts/>,
           loader: contactsLoader, 
         },
-        { path: ':contactId', element: <ContactDetails/> }
+        {
+           path: ':contactId', 
+           element: <ContactDetails/> 
+        },
       ] },
       { path: 'finance', element: <Finance/> },
       { path: 'marketing', element: <Marketing/> },
@@ -44,8 +51,14 @@ const router = createBrowserRouter([
   },
   { 
     path: '/login', 
-    element: <Auth/>, 
-    action: loginAction 
+    element: <AuthRoot/>, 
+    children: [
+      { 
+        index: true, 
+        element: <Login/>,
+        action: loginAction 
+      }
+    ],
   },
 ])
 

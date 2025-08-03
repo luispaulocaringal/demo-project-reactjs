@@ -1,14 +1,12 @@
-import Login from '../../components/Login/Login'
-import Title from "../../components/Title/Title";
+import { Outlet } from "react-router-dom";
 
-import './Auth.css'
+import './AuthRoot.css'
 
-function Auth () {
+function AuthRoot() {
   return (
     <>
-      <Title title="Login"/>
       <div className="auth d-flex justify-content-center">
-        <Login/>
+        <Outlet/>
       </div>
     </>
   )
@@ -29,4 +27,4 @@ export async function action({ request }: { request: Request }) {
   }
 }
 
-export default Auth
+export default AuthRoot

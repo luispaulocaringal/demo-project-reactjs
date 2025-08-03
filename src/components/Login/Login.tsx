@@ -1,26 +1,42 @@
 import { useEffect, useRef } from 'react';
-import { useNavigate, useActionData } from 'react-router-dom';
+import { useNavigate, useActionData, Form } from 'react-router-dom';
 
 import { FadeInUp } from '../Animation/Animation';
 
 import './Login.css';
 
-function Login () {
+function Login() {
   const actionData = useActionData();
-  const loginResponse = actionData || { success: false, message: '' };
   const userRef:any = useRef('');
 
   let navigate = useNavigate();
 
-  if (loginResponse.success) {
-    // Redirect to the dashboard if login is successful
-    navigate('/', { replace: true });
-  }
-
-  // Focus on username field on component load
+  // focus on username field on component load
   useEffect(() => {
     userRef.current.focus();
   }, []);
+
+  // initialize the login response from the action data
+  const loginResponse = actionData || { success: false, message: '' };
+
+  // check if login was successful, if so, navigate to the home page
+  if (loginResponse.success) {
+    navigate('/'); 
+  }
+
+  // initialize the login message
+  let loginMessage = <></>;
+
+  // show the login message if it exists
+  if (loginResponse.message !== '') {
+    loginMessage = (
+      <div className="row mb-2">
+        <div className="col-md-12">
+          <p className={"login-message p-2 alert " + (loginResponse.success ? "alert-success" : "alert-danger")}>{ loginResponse.message }</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <FadeInUp 
@@ -29,12 +45,12 @@ function Login () {
       component="div"
     >
       <div className="card-body">
-        <form method="post" action="/login">
+        <Form method="post">
           <div className="row mb-2">
             <div className="col-md-12">
               <div className="form-group">
                 <label className="input-label">Username</label>
-                <input className="form-control" type="text" ref={userRef} required/>
+                <input className="form-control" type="text" name="username" ref={userRef} required/>
               </div>
             </div>
           </div>
@@ -42,7 +58,7 @@ function Login () {
             <div className="col-md-12">
               <div className="form-group">
                 <label className="input-label">Password</label>
-                <input className="form-control" type="password" required/>
+                <input className="form-control" type="password" name="password" required/>
               </div>
             </div>
           </div>
@@ -51,19 +67,11 @@ function Login () {
             <div className="col-md-12">
               <div className="form-group">
                 <label className="input-label">Company Code</label>
-                <input className="form-control" type="text" required/>
+                <input className="form-control" type="text" name="company" required/>
               </div>
             </div>
           </div>
-          { loginResponse.message ? (
-            <div className="row mb-2">
-              <div className="col-md-12">
-                <p className={"login-message p-2 alert " + (loginResponse.success ? "alert-success" : "alert-danger")}>{ loginResponse.message }</p>
-              </div>
-            </div>
-          ) : (
-            <></>
-          )}
+          { loginMessage }
           <div className="row mb-2">
             <div className="col-md-12">
               <div className="form-group">
@@ -72,7 +80,7 @@ function Login () {
               </div>
             </div>
           </div>
-        </form>
+        </Form>
       </div>
     </FadeInUp>
   )
